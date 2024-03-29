@@ -1,0 +1,353 @@
+body{
+  background-color: #222;
+}
+.start-screen {
+  width: 1100px;
+  height: 470px;
+  margin: auto;
+  border: 1px solid black;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327163511/start-screen.jpg') center/cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.editor-screen {
+  width: 1100px;
+  height: 470px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134715/bg.png');
+  position: relative;
+  overflow: hidden;
+  display: none;
+}
+
+.game-screen {
+  width: 1100px;
+  height: 470px;
+  border: 1px solid black;
+  border-top: none;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134715/bg.png');
+  display: none;
+  margin: 0 auto;
+}
+
+.score-wrapper {
+  padding-left: 40px;
+  width: 1060px;
+  margin: 0 auto;
+  height: 50px;
+  display: none;
+  border: 1px solid black;
+  border-bottom: none;
+  line-height: 50px;
+  font-size: 20px;
+  background-color: #add1f3;
+  color: #ffffff;
+}
+
+.life-count {
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134721/mario-head.png') left center no-repeat;
+  width: 100px;
+  float: left;
+  padding-left: 40px;
+}
+
+.coin-score {
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134717/coin.png') left center no-repeat;
+  width: 150px;
+  float: left;
+  padding-left: 40px;
+}
+
+.level-num {
+  width: 150px;
+  float: left;
+}
+
+.total-score {
+  float: left;
+}
+.cell {
+  width: 31px;
+  height: 31px;
+  border: 1px solid blue;
+}
+
+.active {
+  width: 31px;
+  height: 31px;
+  border: 1px solid blue;
+  background: red;
+  opacity: 0.5;
+}
+
+.element-wrapper {
+  width: 1100px;
+  height: 130px;
+  background: #d2d2d2;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: none;
+}
+
+.platform {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') 0 0;
+}
+
+.coin-box {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -32px 0;
+}
+
+.power-up-box {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -64px 0;
+}
+
+.useless-box {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -96px 0;
+}
+
+.flag-pole {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -128px 0;
+}
+
+.flag {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -160px 0;
+}
+
+.pipe-left {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -192px 0;
+}
+
+.pipe-right {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -224px 0;
+}
+
+.pipe-top-left {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -256px 0;
+}
+
+.pipe-top-right {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/elements.png') -288px 0;
+}
+
+.goomba {
+  width: 31px;
+  height: 31px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134719/enemies.png') 0 0;
+}
+
+.right-arrow {
+  width: 60px;
+  height: 60px;
+  top: 215px;
+  right: 0;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134723/slider-right.png');
+  position: absolute;
+}
+
+.left-arrow {
+  width: 60px;
+  height: 60px;
+  top: 215px;
+  left: 0;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134723/slider-left.png');
+  position: absolute;
+}
+
+.element-wrapper * {
+  margin: 10px;
+  float: left;
+}
+
+.lvl-size {
+  clear: both;
+  float: left;
+  width: 115px;
+  height: 32px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134721/lvl-size.png');
+  margin-right: 10px;
+}
+
+.grid-small-btn {
+  float: left;
+  width: 64px;
+  height: 32px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134720/grid-small-btn.png');
+  border: none;
+  margin-right: 10px;
+}
+
+.grid-medium-btn:selected {
+  background: red;
+}
+
+.grid-medium-btn {
+  float: left;
+  width: 96px;
+  height: 32px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134720/grid-medium-btn.png');
+  border: none;
+  margin-right: 10px;
+}
+
+.grid-large-btn {
+  float: left;
+  width: 128px;
+  height: 32px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134720/grid-large-btn.png');
+  border: none;
+  margin-right: 10px;
+}
+
+.save-map-btn {
+  float: right;
+  width: 100px;
+  height: 100px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134723/save-map-btn.png');
+  border: none;
+  border: 2px solid black;
+  margin-right: 10px;
+  margin-top: -35px;
+}
+
+.clear-map-btn {
+  float: right;
+  width: 100px;
+  height: 100px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134717/clear-map-btn.png');
+  border: none;
+  border: 2px solid black;
+  margin-right: 10px;
+  margin-top: -35px;
+}
+
+.levels-wrapper {
+  width: 1100px;
+  height: 530px;
+  margin: 0 auto;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134715/bg.png');
+}
+
+.start-btn {
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134724/start-btn.png');
+  position: absolute;
+  bottom: 100px;
+  left: 252px;
+  border: 2px solid black;
+}
+
+.editor-btn {
+  width: 200px;
+  height: 50px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134718/editor-btn.png');
+  position: absolute;
+  bottom: 100px;
+  left: 530px;
+  color: #ffffff;
+  border: 2px solid black;
+}
+
+.created-btn {
+  width: 200px;
+  height: 50px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134723/saved-btn.png');
+  position: absolute;
+  bottom: 100px;
+  left: 810px;
+  color: #ffffff;
+  border: 2px solid black;
+}
+
+.back-btn {
+  width: 200px;
+  height: 50px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134717/delete-all-btn.png');
+  color: #ffffff;
+  border: 2px solid black;
+  margin: 10px;
+  display: none;
+}
+
+.level-btn {
+  font-size: 25px;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 248px;
+  height: 50px;
+  color: #ffffff;
+  border: 2px solid black;
+  margin: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #15a7d9;
+}
+
+.delete-all-btn {
+  width: 100px;
+  height: 100px;
+  background: url('https://media.geeksforgeeks.org/wp-content/uploads/20240327134717/delete-all-btn.png');
+  color: #ffffff;
+  border: 2px solid black;
+  margin: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.btn-wrapper {
+  width: 1100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.no-maps {
+  width: 1000px;
+  text-align: center;
+  
+  font-size: 25px;
+  margin: 0 auto;
+  color: #ffffff;
+  background: #5fb952;
+  border: 2px solid black;
+}
+
+.loading-percentage {
+  font-size: 60px;
+  text-align: center;
+  padding: 100px;
+}
+
+.fb-comments {
+  margin: 0 auto;
+}
