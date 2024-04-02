@@ -16,7 +16,7 @@ function Preloader() {
     view.appendToBody(loadingPercentage);
 
     imageSources = {
-      1: 'https://media.geeksforgeeks.org/wp-content/uploads/20240327134717/delete-all-btn.png',
+      1: 'https://media.geeksforgeeks.org/wp-content/uploads/20240327134715/back-btn.png',
       2: 'https://media.geeksforgeeks.org/wp-content/uploads/20240327134715/bg.png',
       3: 'https://media.geeksforgeeks.org/wp-content/uploads/20240327134716/bullet.png',
       4: 'https://media.geeksforgeeks.org/wp-content/uploads/20240327134717/clear-map-btn.png',
