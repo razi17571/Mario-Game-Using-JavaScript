@@ -54,11 +54,10 @@ function CreatedLevels() {
 
   this.deleteAllMaps = function() {
     storage.clear();
-
     that.removeCreatedLevelsScreen();
     that.init();
   };
-
+  
   this.startLevel = function(i) {
     var marioMakerInstance = MarioMaker.getInstance();
     var levelName = storage.getItemName(i);

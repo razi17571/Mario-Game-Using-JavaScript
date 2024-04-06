@@ -278,9 +278,9 @@ function Editor() {
 
     //for fixing the sorting of the localStorage, 01 02 ... 10 11, otherwise the sorting would be 1 10 11 .. 2 20 21 ..
     if (levelCounter < 10) {
-      levelName = 'savedLevel' + '0' + levelCounter;
+      levelName = 'savedLevel' + '0' + (levelCounter - 1);
     } else {
-      levelName = 'savedLevel' + levelCounter;
+      levelName = 'savedLevel' + (levelCounter - 1);
     }
 
     storage.setItem(levelName, map);
